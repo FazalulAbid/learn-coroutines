@@ -17,39 +17,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun learnSuspendFunction() {
-        GlobalScope.launch {
-            // Delay is a suspend function.
-            // It can only be called inside another suspend function or inside a coroutine.
-            val networkCallAnswer1 = doNetworkCall()
-            val networkCallAnswer2 = doNetworkCall2()
-            Log.d(TAG, networkCallAnswer1)
-            Log.d(TAG, networkCallAnswer2)
-            delay(1000L)
-        }
-    }
-
-    private suspend fun doNetworkCall(): String {
-        delay(3000L)
-        return "This is the answer"
-    }
-
-    private suspend fun doNetworkCall2(): String {
-        delay(3000L)
-        return "This is the answer"
-    }
-
-    private fun learnGlobalScope() {
-        // Every coroutine does need a coroutine scope to work.
-        // Global scope means, this coroutine will live as long the application does.
-        // But of course it will die if it finishes its job.
-        GlobalScope.launch {
-            delay(3000L)
-            Log.d(TAG, "Coroutine says hello from thread ${Thread.currentThread().name}")
-        }
-        Log.d(TAG, "Hello from thread ${Thread.currentThread().name}")
-    }
-
     private fun something() = runBlocking {
         launch {
             delay(1000L)
