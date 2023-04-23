@@ -19,12 +19,12 @@ private fun learnSuspendFunction() {
     }
 }
 
-private suspend fun doNetworkCall(): String {
+suspend fun doNetworkCall(): String {
     delay(3000L)
     return "This is the answer"
 }
 
-private suspend fun doNetworkCall2(): String {
+suspend fun doNetworkCall2(): String {
     delay(3000L)
     return "This is the answer"
 }
