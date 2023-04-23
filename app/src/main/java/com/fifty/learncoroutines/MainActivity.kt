@@ -2,9 +2,11 @@ package com.fifty.learncoroutines
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings.Global
 import android.util.Log
 import android.widget.Toast
 import kotlinx.coroutines.*
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
@@ -12,16 +14,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
     }
-
-
-    private fun something() = runBlocking {
-        launch {
-            delay(1000L)
-            Toast.makeText(this@MainActivity, "World", Toast.LENGTH_SHORT).show()
-        }
-        Toast.makeText(this@MainActivity, "Hello", Toast.LENGTH_SHORT).show()
-    }
-
 }
