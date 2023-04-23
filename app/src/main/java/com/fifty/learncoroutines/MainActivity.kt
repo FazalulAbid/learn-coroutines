@@ -7,6 +7,8 @@ import android.util.Log
 import android.widget.Toast
 import kotlinx.coroutines.*
 import kotlin.math.log
+import kotlin.system.measureTimeMillis
+import kotlin.time.measureTime
 
 class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
@@ -14,5 +16,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
     }
+
+
 }
